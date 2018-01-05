@@ -26,6 +26,24 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+		<script>
+			$(document).ready(function() {
+				$('#search').keydown(function() {
+					$('#result').html('');
+					var searchfield = $('#search').val();
+					var expression = new RegExp(searchfield, 'i');
+					$.getJSON('data.json', function(data) {
+						$.each(data, function(key, value) {
+							if (value.LASTNAME.search(expression) != -1 || value.FIRSTNAME.search(expression) != -1) {
+								$('#result').append('<li class="list-group-item">' + value.LASTNAME + '| <span class="text-muted">' + value.FIRSTNAME + '</span></li>');
+							}
+						});
+					});
+				});
+			});
+		</script>
+		<!-- TODO: améliorer la recherche -->
+		<!-- TODO: rendre le nom clicable et afficher les infos -->
 	</body>
 
 </html>
