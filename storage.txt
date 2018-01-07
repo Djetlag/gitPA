@@ -1,0 +1,27 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+	<br/>
+	<div class="container">
+		<nav class="navbar navbar-light navbar-static-top bg-light">
+			<a class="navbar-brand" href="home.html"><img src="logoTBT" alt="your logo"></a>
+			<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapseNavbar">
+					&#9776;
+				</button>
+			<div class="collapse navbar-toggleable-xs" id="CollapseNavbar">
+				<ul class="nav navbar-nav">
+					<li class="nav-item ">
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="home.html">Home <span <div class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">about us</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+</div>
