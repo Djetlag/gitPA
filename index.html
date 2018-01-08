@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>About us</title>
+		<title>Home</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 	</head>
 
@@ -18,43 +18,63 @@
 			<div class="container">
 				<nav class="navbar navbar-light navbar-static-top bg-light">
 
-					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapseNavbar">
+						<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapseNavbar">
 							<a class="navbar-brand" href="home.html">Team Beard Tome</a>&#9776;
 						</button>
 					<div class="collapse navbar-toggleable-xs" id="CollapseNavbar">
 						<ul class="nav nav-tabs justify-content-center">
 							<li class="nav-item">
-								<a class="nav-link" href="index.html">Home</a>
+								<a class="nav-link active" href="home.html">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="maps.html">Maps</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" href="aboutus.html">About us</a>
+								<a class="nav-link " href="aboutus.html">About us</a>
 							</li>
 						</ul>
 					</div>
 				</nav>
 			</div>
 			<div class="container">
-			<p>
-				<b>
-				<center>
-						Ce site a été développé par des étudiants de l'Esaip Angers, dans le but de simplifier les prises de contact entre les étudiants, les professeurs et l'administration.</br>
-						L'utilisateur peut accéder à l'identité, à l'e-mail, au poste (si besoin est) et au bureau (si besoin est) de l'ensemble du corps enseignant, administatif et étudiant.</br></br>
-
-						Tous droits réservés à l'équipe Team Beard Tome, composée de M.DEVES, M.FRAUD-GELDOF, M.GAUME, M.JOURDOIS, M.PIRON.</br></br>
-
-						Pour tous problèmes d'utilisation et/ou erreurs, et d'éventuelles remarques merci de nous contacter via cette adresse : <a href="mailto:teambeardtome@esaip.org"> teambeardtome@esaip.org </a></br>
-				</center>
-				</b>
-			</p>
+			
+			<input type="search" class="form-control ds-input" placeholder="Search..." id="search" /><br/>
+				<div class="table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+				<table class=" table table-striped table-bordered table-hover" id="result">
+					
+				</table>
+			</div>
 		</div>
+
 		</div>
-		
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+		<script>
+		$(document).ready(function() {
+			$('#search').keydown(function() {
+				$('#result').html('');
+				var searchfield = $('#search').val();
+				var expression = new RegExp(searchfield, 'i');
+				$.getJSON('data.json', function(data) {
+					$.each(data, function(key, value) {
+
+						if (value.LASTNAME.search(expression) != -1 || value.FIRSTNAME.search(expression) != -1) {
+							$('#result').append('<div class="table-responsive"><table class="table"><tr><td>' +
+								value.LASTNAME +
+								'</td><td>' +
+								value.FIRSTNAME +
+								'</td><td>' +
+								value.MAIL +
+								'</td><td>' +
+								value.MAT +
+								'</td></tr></table></div>');
+						}
+					});
+
+				});
+			});
+		});
+	</script>
 	</body>
 
 </html>
