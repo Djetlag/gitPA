@@ -12,7 +12,7 @@
 
 	<body>
 		<div class="page-header">
-			<img src="images/logoTBT.png" class="img-rounded center-block" style="width: 10%; height: 10%;">
+			<img src="images/logoEsaip.png" class="img-rounded center-block" style="width: 20%; height: 20%;">
 		</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
 			<br/>
@@ -49,6 +49,18 @@
 			
 			<input type="search" class="form-control ds-input" placeholder="Search..." id="search" /><br/>
 				<div class="table-responsive table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+					<table class=" table table-striped table-bordered table-hover">
+						<thead>
+							<tr>
+								<th width="200px">Last name</th>
+								<th width="200px">First name</th>
+								<th width="350px">Email</th>
+								<th width="200px">Status</th>
+								<th width="200px">Association</th>
+							</tr>
+							
+						</thead>
+					</table>
 				<table class=" table table-striped table-bordered table-hover" id="result">
 					
 				</table>
@@ -68,14 +80,16 @@
 					$.each(data, function(key, value) {
 
 						if (value.LASTNAME.search(expression) != -1 || value.FIRSTNAME.search(expression) != -1) {
-							$('#result').append('<div class="table-responsive"><table class="table"><tr><td>' +
+							$('#result').append('<div class="table-responsive"><table class="table"><tr><td width="200px">' +
 								value.LASTNAME +
-								'</td><td>' +
+								'</td><td width="200px">' +
 								value.FIRSTNAME +
-								'</td><td>' +
+								'</td><td width="350px">' +
 								value.MAIL +
-								'</td><td>' +
-								value.MAT +
+								'</td><td width="200px">' +
+								value.Etud +
+								'</td><td width="200px">' +
+								value.ASSOCIATION +
 								'</td></tr></table></div>');
 						}
 					});
