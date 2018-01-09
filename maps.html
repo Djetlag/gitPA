@@ -7,6 +7,7 @@
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<title>Maps</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	</head>
 
 	<body>
@@ -19,16 +20,24 @@
 				<nav class="navbar navbar-light navbar-static-top bg-light">
 
 					<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#CollapseNavbar">
-							<a class="navbar-brand" href="home.html">Team Beard Tome</a>&#9776;
+							<a class="navbar-brand" href="index.html">Team Beard Tome</a>&#9776;
 						</button>
 					<div class="collapse navbar-toggleable-xs" id="CollapseNavbar">
 						<ul class="nav nav-tabs justify-content-center">
 							<li class="nav-item">
 								<a class="nav-link" href="index.html">Home</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link active" href="maps.html">Maps</a>
-							</li>
+							<li class="nav-item dropdown">
+        						<a class="nav-link dropdown-toggle" href="maps.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Maps</a>
+        						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        							<a class="dropdown-item active" href="maps.html">All bats</a>
+          						<div class="dropdown-divider"></div>
+         							<a class="dropdown-item" href="batA.html">Bat A</a>
+          							<a class="dropdown-item" href="batB.html">Bat B</a>
+          							<a class="dropdown-item" href="batC.html">Bat C</a>
+          							<a class="dropdown-item" href="batE.html">Bat E</a>
+        						</div>
+     						</li>
 							<li class="nav-item">
 								<a class="nav-link" href="aboutus.html">About us</a>
 							</li>
@@ -37,6 +46,48 @@
 				</nav>
 			</div>
 
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+					<div class="card-columns">
+						<div class="card" style="width: 20rem;">
+  							<img class="card-img-top" src="images/logoTBT.png" alt="Card image cap" style="width: 50%; height: 50%;">
+  							<div class="card-block">
+    							<h5 class="card-title">batiment A</h5>
+   								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   								<a href="batA.html" class="btn btn-primary" style="margin-left: 10px; margin-bottom: 10px;">Go bat A</a>
+ 							</div>
+						</div>
+						<div class="card" style="width: 20rem;">
+  							<img class="card-img-top" src="images/logoTBT.png" alt="Card image cap" style="width: 50%; height: 50%;">
+  							<div class="card-block">
+    							<h5 class="card-title">batiment A</h5>
+   								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   								<a href="batA.html" class="btn btn-primary" style="margin-left: 10px; margin-bottom: 10px;">Go bat A</a>
+ 							</div>
+						</div>
+						<div class="card" style="width: 20rem;">
+  							<img class="card-img-top" src="images/logoTBT.png" alt="Card image cap" style="width: 50%; height: 50%;">
+  							<div class="card-block">
+    							<h5 class="card-title">batiment A</h5>
+   								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   								<a href="batA.html" class="btn btn-primary" style="margin-left: 10px; margin-bottom: 10px;">Go bat A</a>
+ 							</div>
+						</div>
+					</div>
+						<div class="card" style="width: 20rem;">
+  							<img class="card-img-top" src="images/logoTBT.png" alt="Card image cap" style="width: 50%; height: 50%;">
+  							<div class="card-block">
+    							<h5 class="card-title">batiment A</h5>
+   								<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+   								<a href="batA.html" class="btn btn-primary" style="margin-left: 10px; margin-bottom: 10px;">Go bat A</a>
+ 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
